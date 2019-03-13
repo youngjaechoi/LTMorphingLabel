@@ -253,7 +253,7 @@ extension LTMorphingLabel {
             totalDelayFrames = Int(ceil(totalDelay / frameRate))
         }
         
-        currentFrame = Int(ceil(progress * Float(totalFrames)))
+        currentFrame = Int(ceil(progress * Float(totalFrames)) + 0.5)
         
         if previousText != text && currentFrame < totalFrames + totalDelayFrames + 10 {
             morphingProgress = progress
